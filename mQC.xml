@@ -17,7 +17,6 @@
         --offset $offsetSelect.offset
         --min_length_gd $min_l_gd
         --max_length_gd $max_l_gd
-        ##--tool_dir "/srv/galaxy/server/tool-data/mQC/mqc_tools/"
         --plotrpftool $plotrpftool
         --outhtml $MappingQC_output
         --outfolder $MappingQC_output.files_path
