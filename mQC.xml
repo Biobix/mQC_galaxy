@@ -1,7 +1,7 @@
-<tool id="mqc" name="mQC" version="1.3">
+<tool id="mqc" name="mQC" version="1.4">
     <description>quality control of ribosome profiling mapping results</description>
     <requirements>
-        <requirement type="package" version="1.3">mqc</requirement>
+        <requirement type="package" version="1.4">mqc</requirement>
     </requirements>
     <command>
         mQC.pl
