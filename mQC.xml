@@ -1,11 +1,12 @@
-<tool id="mqc" name="mQC" version="1.5">
+<tool id="mqc" name="mQC" version="1.6">
     <description>quality control of ribosome profiling mapping results</description>
     <requirements>
-        <requirement type="package" version="1.5">mqc</requirement>
+        <requirement type="package" version="1.6">mqc</requirement>
     </requirements>
     <command>
         mQC.pl
         --galaxy Y
+        --galaxytest $galaxytest
         --experiment_name $exp_name
         --cores $cores
         --species $species
@@ -42,6 +43,7 @@
         
     </command>
     <inputs>
+        <param name="galaxytest" type="hidden" value="N"/>
         <conditional name="inputtypeSelect">
             <param name="inputtype" type="select" label="Select the format of your input data">
                 <option value="sam" selected="true">SAM format</option>
@@ -99,6 +101,7 @@
     </outputs>
     <tests>
         <test>
+            <param name="galaxytest" value="Y">
             <param name="inputtype" value="sam"/>
             <param name="samfile" value="test_data_mESC.sam" ftype="sam"/>
             <param name="exp_name" value="test_data_mESC"/>
